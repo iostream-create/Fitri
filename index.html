@@ -26,14 +26,14 @@
       background: #010d1f;
       color: var(--star);
       overflow-x: hidden;
-      /* FIX: hilangkan tap highlight di seluruh halaman */
+      
       -webkit-tap-highlight-color: transparent;
     }
 
     a { text-decoration: none; color: inherit; }
     ul { list-style: none; }
 
-    /* ── GALAXY CANVAS ── */
+    
     #galaxy {
       position: fixed;
       inset: 0;
@@ -41,7 +41,7 @@
       pointer-events: none;
     }
 
-    /* ── NAVBAR ── */
+    
     .navbar {
       position: fixed;
       top: 0; left: 0;
@@ -58,12 +58,12 @@
       border-bottom: 1px solid rgba(255,255,255,0.07);
     }
 
-    /* FIX: wrapper posisi relative untuk dropdown */
+    
     .nav-wrapper {
       position: relative;
     }
 
-    /* Hamburger button */
+    
     .menu-btn {
       display: flex;
       align-items: center;
@@ -72,7 +72,7 @@
       padding: 8px 12px;
       border-radius: 8px;
       user-select: none;
-      /* FIX: hapus semua highlight/outline saat diklik */
+     
       -webkit-tap-highlight-color: transparent;
       outline: none;
       -webkit-user-select: none;
@@ -80,18 +80,17 @@
     }
     .menu-btn:hover  { background: rgba(255,255,255,0.08); }
     .menu-btn:focus  { outline: none; }
-    .menu-btn:active { background: rgba(255,255,255,0.05); } /* subtle, no blue box */
+    .menu-btn:active { background: rgba(255,255,255,0.05); } 
 
-    /* FIX: tulisan MENU — pakai warna solid putih sebagai fallback,
-       gradient clip hanya jika browser support */
+    
     .menu-label {
       font-size: .7rem;
       font-weight: 600;
       letter-spacing: .2em;
       text-transform: uppercase;
-      color: #ffffff;                        /* ← solid white, pasti tampil */
+      color: #ffffff;                        
     }
-    /* Progressive enhancement: gradient jika browser support */
+    
     @supports (-webkit-background-clip: text) {
       .menu-label {
         background: linear-gradient(135deg, #7eb8ff 0%, #ffffff 100%);
@@ -101,7 +100,7 @@
       }
     }
 
-    /* 3-bar hamburger */
+    
     .hbg {
       width: 22px;
       height: 15px;
@@ -122,7 +121,7 @@
     .menu-btn.open .hbg span:nth-child(2) { opacity: 0; transform: scaleX(0); }
     .menu-btn.open .hbg span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
-    /* Dropdown */
+    
     .nav-menu {
       position: absolute;
       top: calc(100% + 0px);
@@ -153,7 +152,7 @@
       text-transform: uppercase;
       color: rgba(200,225,255,.8);
       border-left: 2px solid transparent;
-      /* FIX: hapus tap highlight di link juga */
+      
       -webkit-tap-highlight-color: transparent;
       transition: all .2s;
     }
@@ -164,7 +163,7 @@
       padding-left: 30px;
     }
 
-    /* ── SECTIONS ── */
+    
     section {
       position: relative;
       z-index: 10;
@@ -183,7 +182,7 @@
       font-weight: 700;
       letter-spacing: .12em;
       text-transform: uppercase;
-      /* FIX: sama — solid dulu, gradient sebagai enhancement */
+      
       color: #ffffff;
       margin-bottom: 2rem;
     }
@@ -204,7 +203,7 @@
       border-radius: 2px;
     }
 
-    /* ── HOME ── */
+    
     #Home { gap: .8rem; }
     .name {
       font-family: 'Cormorant Garamond', serif;
@@ -235,7 +234,7 @@
       to   { opacity:1; transform:translateY(0); }
     }
 
-    /* ── GLASS BOX ── */
+    
     .glass {
       background: var(--glass);
       border: 1px solid var(--border);
@@ -259,10 +258,10 @@
       color: rgba(210,230,255,.87);
     }
 
-    /* ── ABOUT ── */
+    
     #About { gap: 1.4rem; }
 
-    /* ── BIO ── */
+    
     #Bio .bio-list {
       text-align: left;
       display: flex;
@@ -284,7 +283,7 @@
       color: #e8f4ff;
     }
 
-    /* ── PENGALAMAN ── */
+    
     #Pengalaman { gap: 1.6rem; }
     .exp-list { display: flex; flex-direction: column; gap: 1.2rem; width: 100%; max-width: 640px; }
     .exp-card {
@@ -314,7 +313,7 @@
     }
     .exp-card p { font-size: .88rem; font-weight: 300; color: rgba(200,220,255,.7); line-height: 1.7; }
 
-    /* ── CONTACT ── */
+    
     #Contact { gap: 2.4rem; }
     .contact-row { display: flex; justify-content: center; gap: 2.4rem; flex-wrap: wrap; }
     .contact-link {
@@ -322,7 +321,7 @@
       flex-direction: column;
       align-items: center;
       gap: .7rem;
-      -webkit-tap-highlight-color: transparent;  /* FIX: no blue on mobile tap */
+      -webkit-tap-highlight-color: transparent; 
     }
     .contact-link .icon-wrap {
       width: 66px; height: 66px;
@@ -355,13 +354,11 @@
     .ig:hover .icon-wrap { transform: translateY(-7px) scale(1.1); box-shadow: 0 0 26px rgba(220,39,67,.45); border-color: rgba(220,39,67,.3); }
     .ig:hover span  { color: #e6683c; }
 
-    /* Email icon warna biru muda */
     .em .icon-wrap  { color: #60a5fa; }
     .em:hover .icon-wrap { transform: translateY(-7px) scale(1.1); box-shadow: 0 0 26px rgba(96,165,250,.5); border-color: rgba(96,165,250,.4); }
     .em:hover span  { color: #60a5fa; }
 
-    /* ── SCROLL ARROW ── */
-    .scroll-arrow {
+        .scroll-arrow {
       position: relative; z-index: 10;
       display: flex; justify-content: center;
       padding: .4rem 0;
@@ -373,7 +370,7 @@
       50%      { transform: translateY(8px); opacity:.85; }
     }
 
-    /* ── FADE-IN ── */
+    
     .fade { opacity:0; transform:translateY(30px); transition:opacity .7s ease,transform .7s ease; }
     .fade.show { opacity:1; transform:none; }
 
@@ -387,9 +384,9 @@
 
 <canvas id="galaxy"></canvas>
 
-<!-- NAVBAR -->
+
 <nav class="navbar">
-  <!-- FIX: nav-wrapper membungkus button + dropdown supaya posisi dropdown relatif ke button -->
+ 
   <div class="nav-wrapper">
     <div class="menu-btn" id="menuBtn" role="button" aria-label="Toggle menu">
       <span class="menu-label">MENU</span>
@@ -407,14 +404,14 @@
   </div>
 </nav>
 
-<!-- HOME -->
+
 <section id="Home">
   <h2 class="name">Fitri</h2>
   <p class="tagline">Hello Everyone</p>
 </section>
 <div class="scroll-arrow"><i class="fas fa-chevron-down"></i></div>
 
-<!-- ABOUT -->
+
 <section id="About" class="fade">
   <h2 class="sec-title">Tentang Saya</h2>
   <div class="glass">
@@ -423,7 +420,7 @@
 </section>
 <div class="scroll-arrow"><i class="fas fa-chevron-down"></i></div>
 
-<!-- BIO -->
+
 <section id="Bio" class="fade">
   <h2 class="sec-title">Biodata</h2>
   <div class="glass">
@@ -436,7 +433,7 @@
 </section>
 <div class="scroll-arrow"><i class="fas fa-chevron-down"></i></div>
 
-<!-- PENGALAMAN -->
+
 <section id="Pengalaman" class="fade">
   <h2 class="sec-title">Pengalaman</h2>
   <div class="exp-list">
@@ -456,7 +453,7 @@
 </section>
 <div class="scroll-arrow"><i class="fas fa-chevron-down"></i></div>
 
-<!-- CONTACT -->
+
 <section id="Contact">
   <h2 class="sec-title">Get In Touch</h2>
   <div class="contact-row">
@@ -476,7 +473,7 @@
 </section>
 
 <script>
-/* ── GALAXY BIMASAKTI ── */
+
 (function(){
   const canvas = document.getElementById('galaxy');
   const ctx = canvas.getContext('2d');
@@ -558,7 +555,7 @@
   requestAnimationFrame(draw);
 })();
 
-/* ── HAMBURGER MENU ── */
+
 const menuBtn = document.getElementById('menuBtn');
 const navMenu = document.getElementById('navMenu');
 
@@ -578,13 +575,13 @@ function closeMenu(){
   menuBtn.classList.remove('open');
 }
 
-/* ── SCROLL FADE-IN ── */
+
 const io = new IntersectionObserver((entries)=>{
   entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target); } });
 },{threshold:.1});
 document.querySelectorAll('.fade').forEach(el=>io.observe(el));
 
-/* ── NAVBAR DARKEN ON SCROLL ── */
+
 window.addEventListener('scroll',()=>{
   document.querySelector('.navbar').style.background =
     window.scrollY>40?'rgba(1,13,31,0.96)':'rgba(1,13,31,0.82)';
